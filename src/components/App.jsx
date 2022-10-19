@@ -3,7 +3,7 @@ import { Filter } from './Filter';
 import { ContactList } from './ContactList';
 import { ContactForm } from './ContactForm';
 export const App = () => {
-  const [contacts , setContacts] = useState(()=>JSON.parse(localStorage.getItem('contacts') ?? []))
+  const [contacts , setContacts] = useState(()=>JSON.parse(localStorage.getItem('contacts')) ?? [])
   const [filter , setFilter] = useState('')
 
   useEffect(()=> localStorage.setItem('contacts' , JSON.stringify(contacts)),[contacts])
